@@ -13,6 +13,7 @@
 
 ## 鸣谢
 
+<<<<<<< HEAD
 [@Wibus](https://github.com/wibus-wee) 提供项目相关帮助
 
 ### 参考项目
@@ -27,3 +28,4 @@
 
 [🖼 API Version 1.1 | V4 Docs (chevereto.com)](https://v4-docs.chevereto.com/developer/api/api-v1.html#key)
 
+>>>>>>> 39919baea38ada2739f34011fbb4ec12b1925a7f
