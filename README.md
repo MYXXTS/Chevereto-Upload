@@ -9,6 +9,6 @@
 
 ## 鸣谢
 
-@Wibus 提供项目相关帮助
+@wibus-wee 提供项目相关帮助
 
 [picgo-plugin-chevereto](https://github.com/wf-nb/PicGoPlugins/tree/main/picgo-plugin-chevereto) 提供项目参考
