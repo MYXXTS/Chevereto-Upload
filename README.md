@@ -15,11 +15,11 @@
 
 [@Wibus](https://github.com/wibus-wee) 提供项目相关帮助
 
-### 参考项目
+## 参考项目
 
 [picgo-plugin-chevereto](https://github.com/wf-nb/PicGoPlugins/tree/main/picgo-plugin-chevereto) 
 
-### 参考文档
+## 参考文档
 
 [GUI插件开发 | PicGo-Core](https://picgo.github.io/PicGo-Core-Doc/zh/dev-guide/gui.html#shownotification-option)
 
