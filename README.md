@@ -2,7 +2,7 @@
 
 > Picgo-Plugin-Cheveteto-Upload © 沐云湘夕，采用 MIT 开源协议开源，创建于 2023年1月4日。
 >
-> [个人网站](https://www.myxxts.com) · GitHub [@MYXXTS]([MYXXTS (沐云湘夕) (github.com)](https://github.com/MYXXTS))
+> [个人网站](https://www.myxxts.com) · GitHub [@MYXXTS]([MYXXTS (沐云湘夕)](https://github.com/MYXXTS))
 
 一个可以支持 Chevereto（官方版本） 上传的 PicGo 插件，目前正在开发中
 
@@ -13,7 +13,6 @@
 
 ## 鸣谢
 
-<<<<<<< HEAD
 [@Wibus](https://github.com/wibus-wee) 提供项目相关帮助
 
 ### 参考项目
@@ -27,5 +26,3 @@
 [API v1 | V3 Docs (chevereto.com)](https://v3-docs.chevereto.com/api/#api-key)
 
 [🖼 API Version 1.1 | V4 Docs (chevereto.com)](https://v4-docs.chevereto.com/developer/api/api-v1.html#key)
-
->>>>>>> 39919baea38ada2739f34011fbb4ec12b1925a7f
