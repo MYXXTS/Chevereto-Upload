@@ -19,14 +19,15 @@ CLI 版本 PicGo 在命令行中输入：picgo install chevetetov4，下载后�
 
 ### 参数
 
-|    参数名    |                           参数内容                           |
-| :----------: | :----------------------------------------------------------: |
-|     url      |       上传网址（如：https://example.com/api/1/upload）       |
-|     key      |   在个人设置页面获取的 API Key 或者是图床的 Public API Key   |
-|   album_id   | 用户所拥有的相册 ID（参数为相册详细信息中的 id_encoded，默认不添加） |
-| category_id  |         图床的图片分类 ID （参数为整数，默认不添加）         |
-| source_param |          上传API的文件参数（可不填，默认为source）           |
-|  url_param   |         获取返回图片链接的键名（可不填，默认为url）          |
+|      参数名      |                           参数内容                           |
+| :--------------: | :----------------------------------------------------------: |
+| cheveretoversion |                  选择 Chevereto 的图床版本                   |
+|       url        | 上传网址（V3 与 V4 版本目前一致，如：https://example.com/api/1/upload） |
+|       key        | V3 版本为后台设置的总 API，V4 版本可通过个人设置页面获取个人 API Key 或者是在后台设置获取图床的 Public API Key |
+|     album_id     | （V4版本可用）用户所拥有的相册 ID（参数为相册详细信息中的 id_encoded，默认不添加） |
+|   category_id    |  （V4版本可用）图床的图片分类 ID （参数为整数，默认不添加）  |
+|   source_param   |          上传API的文件参数（可不填，默认为source）           |
+|    url_param     |         获取返回图片链接的键名（可不填，默认为url）          |
 
 
 
@@ -34,7 +35,7 @@ CLI 版本 PicGo 在命令行中输入：picgo install chevetetov4，下载后�
 ## 计划
 
 - [x] 支持 V4 版本
-- [ ] 支持 V3 版本
+- [x] 支持 V3 版本
 
 ## 鸣谢
 
