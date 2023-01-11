@@ -7,8 +7,9 @@ assignees:
 body:
   - type: markdown
     attributes:
-      value: |
+      value: |+
         ## PicGo Plugin Chevereto Issue 模板
+        ---
         请依照该模板来提交您的问题，否则将会被关闭。
         **反馈前请确认关闭的 Issue 中没有与您遇到的相似的问题，否则同样的提问也会被关闭。**
   - type: checkboxes
@@ -21,12 +22,12 @@ body:
           required: true
         - label: "[Issues](https://github.com/MYXXTS/Chevereto-Upload/issues?q=is%3Aissue+is%3Aclosed)"
           required: true
-        - label: "插件设置正确无误，且插件为最新版本"
+        - label: 插件设置正确无误，且插件为最新版本
           required: true
-        - label: "Chevereto 网站相关设置无误"
+        - label: Chevereto 网站相关设置无误
           required: true
   - type: dropdown
-    id: version
+    id: chevereto_version
     attributes:
       label: 图床版本号
       options:
@@ -35,7 +36,7 @@ body:
     validations:
       required: true
   - type: input
-    id: version
+    id: picgo_version
     attributes:
       label: PicGo的版本
       placeholder: 例如 v2.3.0，如果是测试版请说明
