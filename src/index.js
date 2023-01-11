@@ -15,12 +15,12 @@ module.exports = (ctx) => {
         try {
             let imgList = ctx.output;
             for (let i in imgList) {
-                let image = imgList[i].buffer;
-                let name = imgList[i].fileName;
+                const image = imgList[i].buffer;
+                const name = imgList[i].fileName;
                 if (!image && imgList[i].base64Image) {
                     image = Buffer.from(imgList[i].base64Image, 'base64');
                 }
-                let postConfig = postOptions(
+                const postConfig = postOptions(
                     image,
                     name,
                     userConfig
@@ -55,10 +55,10 @@ module.exports = (ctx) => {
     }
 
     const postOptions = (image, fileName, userConfig) => {
-        let version = userConfig.cheveretoversion;
-        let key = userConfig.key;
-        let url = userConfig.url;
-        let source_param = userConfig.source_param || 'source';
+        const version = userConfig.cheveretoversion;
+        const key = userConfig.key;
+        const url = userConfig.url;
+        const source_param = userConfig.source_param || 'source';
         let headers, formData = {};
         if (version === 'V4') {
             headers = {
