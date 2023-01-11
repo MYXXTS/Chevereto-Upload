@@ -7,6 +7,49 @@ module.exports = (ctx) => {
             config: config
         })
     }
+
+    const postOptions = (image, fileName, userConfig) => {
+        const version = userConfig.cheveretoversion;
+        const key = userConfig.key;
+        const url = userConfig.url;
+        const source_param = userConfig.source_param || 'source';
+        let headers, formData = {};
+        if (version === 'V4') {
+            headers = {
+                'contentType': 'multipart/form-data',
+                'User-Agent': 'PicGo',
+                'X-API-Key': key,
+            }
+            formData = {
+                'format': 'json',
+                'album_id': userConfig.album_id,
+                'category_id': userConfig.category_id,
+            }
+        } else {
+            headers = {
+                'contentType': 'multipart/form-data',
+                'User-Agent': 'PicGo',
+            }
+            formData = {
+                'format': 'json',
+                'key': key,
+            }
+        }
+        const opts = {
+            method: 'POST',
+            url: url,
+            strictSSL: false,
+            headers: headers,
+            formData: formData,
+        }
+        opts.formData[source_param] = {};
+        opts.formData[source_param].value = image;
+        opts.formData[source_param].options = {
+            filename: fileName
+        }
+        return opts;
+    }
+    
     const handle = async function (ctx) {
         let userConfig = ctx.getConfig('picBed.' + UPLOADER);
         if (!userConfig) {
@@ -52,48 +95,6 @@ module.exports = (ctx) => {
             })
             throw err;
         }
-    }
-
-    const postOptions = (image, fileName, userConfig) => {
-        const version = userConfig.cheveretoversion;
-        const key = userConfig.key;
-        const url = userConfig.url;
-        const source_param = userConfig.source_param || 'source';
-        let headers, formData = {};
-        if (version === 'V4') {
-            headers = {
-                'contentType': 'multipart/form-data',
-                'User-Agent': 'PicGo',
-                'X-API-Key': key,
-            }
-            formData = {
-                'format': 'json',
-                'album_id': userConfig.album_id,
-                'category_id': userConfig.category_id,
-            }
-        } else {
-            headers = {
-                'contentType': 'multipart/form-data',
-                'User-Agent': 'PicGo',
-            }
-            formData = {
-                'format': 'json',
-                'key': key,
-            }
-        }
-        const opts = {
-            method: 'POST',
-            url: url,
-            strictSSL: false,
-            headers: headers,
-            formData: formData,
-        }
-        opts.formData[source_param] = {};
-        opts.formData[source_param].value = image;
-        opts.formData[source_param].options = {
-            filename: fileName
-        }
-        return opts;
     }
 
     const config = ctx => {
