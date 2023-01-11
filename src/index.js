@@ -49,7 +49,7 @@ module.exports = (ctx) => {
         }
         return opts;
     }
-    
+
     const handle = async function (ctx) {
         let userConfig = ctx.getConfig('picBed.' + UPLOADER);
         if (!userConfig) {

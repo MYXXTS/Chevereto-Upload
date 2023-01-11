@@ -13,9 +13,9 @@
 
 ### 使用
 
-GUI 版本 PicGo 在插件设置中搜索 chevetetov4，下载后按照说明配置相关参数即可使用
+GUI 版本 PicGo 在插件设置中搜索 cheveretov4，下载后按照说明配置相关参数即可使用
 
-CLI 版本 PicGo 在命令行中输入：picgo install chevetetov4，下载后按照 [配置文件 | PicGo-Core](https://picgo.github.io/PicGo-Core-Doc/zh/guide/config.html#默认配置文件) 说明进行相关配置之后即可使用
+CLI 版本 PicGo 在命令行中输入：picgo install cheveretov4，下载后按照 [配置文件 | PicGo-Core](https://picgo.github.io/PicGo-Core-Doc/zh/guide/config.html#默认配置文件) 说明进行相关配置之后即可使用
 
 ### 参数
 
