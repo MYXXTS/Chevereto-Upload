@@ -25,8 +25,9 @@ module.exports = (ctx) => {
                     name,
                     userConfig
                 );
-                console.log(postConfig);
+                // console.log(postConfig);
                 let body = await ctx.request(postConfig);
+                // console.log(body);
                 if (!body) {
                     throw new Error('上传图片失败' + body);
                 }
