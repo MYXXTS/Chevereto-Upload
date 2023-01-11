@@ -1,8 +1,8 @@
 ---
-name: Bug report（问题反馈）
+name: Bug Report（问题反馈）
 about: Create a report to help us improve
 title: "[BUG] "
-labels: ''
+labels: BUG
 assignees: MYXXTS
 
 ---
