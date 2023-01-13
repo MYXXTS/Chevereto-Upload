@@ -2,6 +2,8 @@
 
 一个可以支持 Chevereto（官方版本） 上传的 PicGo 插件
 
+![npm](https://img.shields.io/npm/v/picgo-plugin-cheveretov4?style=for-the-badge)
+
 ## 特点
 
 - 采用 Chevereto V4 的新版本 API 1.1

@@ -9,38 +9,40 @@ module.exports = (ctx) => {
     }
 
     const postOptions = (image, fileName, userConfig) => {
-        const version = userConfig.cheveretoversion;
+        const version = userConfig.cheveretoversion === "V4";
         const key = userConfig.key;
         const url = userConfig.url;
         const source_param = userConfig.source_param || 'source';
-        let headers, formData = {};
-        if (version === 'V4') {
-            headers = {
-                'contentType': 'multipart/form-data',
-                'User-Agent': 'PicGo',
-                'X-API-Key': key,
-            }
-            formData = {
-                'format': 'json',
-                'album_id': userConfig.album_id,
-                'category_id': userConfig.category_id,
-            }
-        } else {
-            headers = {
-                'contentType': 'multipart/form-data',
-                'User-Agent': 'PicGo',
-            }
-            formData = {
-                'format': 'json',
-                'key': key,
-            }
+        let V3headers = {
+            'contentType': 'multipart/form-data',
+            'User-Agent': 'PicGo',
+        }
+        let V3formData = {
+            'format': 'json',
+            'key': key,
+        }
+        let V4headers = {
+            'contentType': 'multipart/form-data',
+            'User-Agent': 'PicGo',
+            'X-API-Key': key,
+        }
+        let V4formData = {
+            'format': 'json',
+            'album_id': userConfig.album_id,
+            'category_id': userConfig.category_id,
+        }
+        if (!userConfig.album_id) {
+            delete V4formData.album_id
+        }
+        if (!userConfig.category_id) {
+            delete V4formData.category_id
         }
         const opts = {
             method: 'POST',
             url: url,
             strictSSL: false,
-            headers: headers,
-            formData: formData,
+            headers: version ? V4headers : V3headers,
+            formData: version ? V4formData : V3formData,
         }
         opts.formData[source_param] = {};
         opts.formData[source_param].value = image;
@@ -56,7 +58,7 @@ module.exports = (ctx) => {
             throw new Error('Can\'t find uploader config');
         }
         try {
-            let imgList = ctx.output;
+            const imgList = ctx.output;
             for (let i in imgList) {
                 const image = imgList[i].buffer;
                 const name = imgList[i].fileName;
@@ -68,9 +70,7 @@ module.exports = (ctx) => {
                     name,
                     userConfig
                 );
-                // console.log(postConfig);
                 let body = await ctx.request(postConfig);
-                // console.log(body);
                 if (!body) {
                     throw new Error('上传图片失败' + body);
                 }
@@ -88,6 +88,7 @@ module.exports = (ctx) => {
                     throw new Error('上传失败' + body);
                 }
             }
+            console.log(imgList);
         } catch (err) {
             ctx.emit('notification', {
                 title: '上传失败',
