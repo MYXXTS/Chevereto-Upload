@@ -30,12 +30,16 @@ module.exports = (ctx) => {
             'format': 'json',
             'album_id': userConfig.album_id,
             'category_id': userConfig.category_id,
+            'description':userConfig.description,
         }
         if (!userConfig.album_id) {
             delete V4formData.album_id
         }
         if (!userConfig.category_id) {
             delete V4formData.category_id
+        }
+        if (!userConfig.description) {
+            delete V4formData.description
         }
         const opts = {
             method: 'POST',
@@ -153,6 +157,14 @@ module.exports = (ctx) => {
                 message: '（V4 版本）图床的图片分类 ID （参数为整数，默认不添加）',
                 required: false,
                 alias: 'Category ID'
+            },
+            {
+                name: 'description',
+                type: 'input',
+                default: userConfig.description,
+                message: '图片描述（默认不添加）',
+                required: false,
+                alias: 'Description'
             },
             {
                 name: 'source_param',
