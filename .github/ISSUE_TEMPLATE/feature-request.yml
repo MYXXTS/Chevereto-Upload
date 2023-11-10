@@ -1,0 +1,25 @@
+name: Feature Request（功能建议）
+description: 为此项目提出建议
+title: "[FEATURE] "
+labels: ["BUG"]
+assignees: 
+  - MYXXTS
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## PicGo Plugin Chevereto Feature 模板
+        请依照该模板来提交您的建议，否则将会被关闭。
+        **反馈前请确认关闭的 Issue 中没有与您遇到的相似的内容，否则同样的内容也会被关闭。**
+  - type: textarea
+    id: description
+    attributes:
+      label: 建议具体内容
+      description: 如需要截图对建议进行辅助说明，可在说明中上传截图
+    validations:
+      required: true
+  - type: textarea
+    id: other
+    attributes:
+      label: 补充说明
+      description: 如有其他补充说明，请填写在此处
