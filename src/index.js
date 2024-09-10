@@ -37,7 +37,7 @@ module.exports = (ctx) => {
       }
     }
     if (!version) {
-      data.key = key
+      data.append('key', key)
     }
     const opts = {
       method: 'POST',
