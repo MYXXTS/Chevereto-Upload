@@ -1,6 +1,6 @@
 {
   "name": "picgo-plugin-cheveretov4",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Chevereto V4 Upload",
   "main": "src/index.js",
   "publishConfig": {
