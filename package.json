@@ -21,7 +21,7 @@
   "author": "MYXXTS",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^8.25.0",
+    "eslint": "^9.0.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^17.0.0",
